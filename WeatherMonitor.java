@@ -11,6 +11,7 @@ If the temperature is beyond 60 degree Celsius or below -10 degree Celsius, warn
 
 import java.util.Scanner;
 
+//converts Fahrenheit to Celcius
 class FtoC {
 
 	static float Conversion(float ftemp)
@@ -18,18 +19,19 @@ class FtoC {
 		}	
 }
 
-
+//City Values
 class City{
 	private float tempval;
 	static int numberOfCities;
-	
+	//Temperature Getter
 	public float getTemp() {
 		return tempval;
 	}
+	//Temperature Setter
 	public void setTemp(float tempval) {
 		this.tempval = tempval;
 	}
-	
+	//takes Number of Cities + edge conditions
 	public int numberOfCities() {
 			System.out.println("Enter the number of cities");
 			Scanner scan = new Scanner(System.in);
@@ -44,6 +46,7 @@ class City{
 			//	scan.close();
 		return numberOfCities;
 	}
+	//checks if Fahrenheit or Celcius
 	public void F_Or_C() {
 		System.out.println("Temp in Farenheit or Celcius?");
 		
@@ -65,6 +68,7 @@ class City{
 		scan.close();
 		}
 }	
+	//Temperature Values
 	public void temperature(){
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter temp: ");
@@ -74,6 +78,7 @@ class City{
 		F_Or_C();
 		
 }
+	//Range checker
 	public void checkRange() {
 		
 	if (getTemp()>60||getTemp()<-10) {
@@ -82,7 +87,7 @@ class City{
 	else System.out.println("Everything is cool!");
 }
 }
-
+//class with main
 public class WeatherMonitor {	
 	public static void main(String[] args) {
 		City city = new City();
